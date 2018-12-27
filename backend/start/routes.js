@@ -17,3 +17,8 @@
 const Route = use('Route')
 
 Route.on('/').render('welcome')
+
+// API v1 Routes
+Route.group(() => {
+    Route.resource('users', 'UserController')
+}).prefix('api/v1')
